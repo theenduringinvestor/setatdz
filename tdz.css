@@ -196,9 +196,13 @@ header {
     margin: 20px auto 40px;
   }
 
+  .hero__img-wrap {
+    height: 680px;
+    overflow: visible;
+  }
+
   .hero__col--image img {
     height: 100%;
-    max-height: 680px;
     object-fit: cover;
     object-position: top;
   }
