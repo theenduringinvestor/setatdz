@@ -2,14 +2,6 @@
    GLOBAL
 =========================== */
 
-html {
-  margin: 0;
-  padding: 0;
-  height: auto;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
 *,
 *::before,
 *::after {
@@ -18,14 +10,10 @@ html {
 
 body {
   margin: 0;
-  padding: 0;
-  padding-top: 60px;
   font-family: Arial, sans-serif;
   background: #000;
   color: red;
-  height: auto;
-  overflow-x: hidden;
-  overflow-y: auto;
+  padding-top: 60px;
 }
 
 img {
@@ -38,14 +26,13 @@ img {
 =========================== */
 
 header {
-  margin: 0;
-  padding: 10px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 20px;
   background: #000;
   border-bottom: 1px solid rgba(255, 0, 0, 0.4);
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -55,6 +42,11 @@ header {
 .site-title {
   margin: 0;
   padding: 0;
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  padding-right: 95px;
+  color: red;
   font-size: 22px;
   font-weight: 800;
   text-align: center;
