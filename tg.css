@@ -172,7 +172,7 @@ header {
 
 .gallery-item img {
   width: 100%;
-  height: 220px; /* force equal height */
+  aspect-ratio: 3 / 5; /* 3:5 ratio */
   object-fit: cover; /* crop to keep ratio clean */
   object-position: top; /* show top of image */
   border-radius: 8px;
