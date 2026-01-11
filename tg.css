@@ -156,20 +156,6 @@ header {
   gap: 16px;
 }
 
-/* responsive breakpoints */
-
-@media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 550px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ===========================
    GALLERY ITEMS
 =========================== */

@@ -177,20 +177,6 @@ header {
   margin: 0 auto;
 }
 
-/* responsive breakpoints */
-
-@media (max-width: 900px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 550px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .gallery-item {
   margin: 0;
   background: rgba(0, 0, 0, 0.7);
@@ -232,22 +218,6 @@ header {
   border: 1px solid rgba(255, 0, 0, 0.45);
   padding: 6px 10px;
   border-radius: 999px;
-}
-
-/* keep it clean on tiny screens */
-@media (max-width: 360px) {
-  .gallery-grid {
-    gap: 10px;
-  }
-
-  .gallery-item figcaption {
-    font-size: 0.82rem;
-    padding: 9px;
-  }
-
-  .download-link {
-    padding: 5px 8px;
-  }
 }
 
 /* ===========================
