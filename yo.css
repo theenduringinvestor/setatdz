@@ -72,7 +72,7 @@ header {
 /* center title, leave space for MENU button on right */
 .site-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 800;
   text-align: center;
   /* leave space on right for menu */
@@ -82,7 +82,7 @@ header {
 
 @media (max-width: 600px) {
   .site-title {
-    font-size: 16px;
+    font-size: 22px;
     padding-right: 88px;
   }
 }
