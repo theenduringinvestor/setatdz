@@ -30,8 +30,37 @@
 
   <body>
     <!-- HEADER (same as homepage) -->
-    <header>
-      <h1 class="site-title">ShawElias Talent Agency</h1>
+    <header
+      style="
+        padding: 8px 16px;
+        width: 100%;
+        max-width: 100%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      "
+    >
+      <a
+        href="index.html"
+        class="site-title-link"
+        style="
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+        "
+      >
+        <h1 class="site-title">
+          <img
+            src="logo3.png"
+            alt="seta2"
+            style="max-width: 400px; height: auto; margin-top: -40px"
+          />
+        </h1>
+      </a>
+      <div style="flex: 1"></div>
 
       <button class="nav-toggle" aria-label="Toggle menu" type="button">
         <div class="nav-toggle__bars">
@@ -40,11 +69,10 @@
         <span class="nav-toggle__label">MENU</span>
       </button>
 
-      <nav class="nav-menu" aria-label="Site navigation">
-        <a href="index.html">Home</a>
+      <nav class="nav-menu">
         <a href="films.html">Films</a>
-        <a href="index.html#casting">Casting</a>
-        <a href="index.html#join">Join</a>
+        <a href="#casting">Casting</a>
+        <a href="#join">Join</a>
         <a href="yb.html">Yo Bro Gallery</a>
         <a href="tg.html">The Ganja Gallery</a>
         <a href="wt.html">What Ticket? Gallery</a>
@@ -223,20 +251,38 @@
       </section>
     </main>
 
-    <footer>
+    <!-- Shared footer start -->
+    <footer class="ms-footer" style="background: #000; color: #ff0000">
       <a
-        class="ig-badge neon ig-badge--footer"
         href="https://www.instagram.com/shawelias_talentagency?igsh=MTl0bWl4MWhtbDc5cQ=="
         target="_blank"
-        rel="noopener"
-        aria-label="Follow us on Instagram"
+        rel="noopener noreferrer"
+        class="ms-footer-ig"
+        aria-label="Shaw Elias Talent Agency on Instagram"
       >
-        <span class="ig-icon-svg"></span>
-        Follow us
+        <!-- Instagram Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span>Follow Us</span>
       </a>
-
-      <p>© 2026 ShawElias Talent Agency. All rights reserved.</p>
+      <p class="copyright-red">
+        © 2026 ShawElias Talent Agency. All rights reserved.
+      </p>
     </footer>
+    <!-- Shared footer end -->
 
     <script>
       // HAMBURGER
@@ -271,6 +317,11 @@
         prevFilmBtn.addEventListener("click", () => {
           filmIndex = (filmIndex - 1 + filmSlides.length) % filmSlides.length;
           showFilmSlide(filmIndex);
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft" && prevFilmBtn) prevFilmBtn.click();
+          else if (e.key === "ArrowRight" && nextFilmBtn) nextFilmBtn.click();
         });
 
         showFilmSlide(filmIndex);

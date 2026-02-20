@@ -57,6 +57,10 @@
       property="og:description"
       content="Shaw Elias Talent Agency connects actors, creators, and performers with independent films, casting opportunities, and visual productions."
     />
+    <meta property="og:image" content="https://yourdomain.com/trans.png" />
+    <meta property="og:image:alt" content="Shaw Elias Talent Agency Logo" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Shaw Elias Talent Agency" />
     <meta property="og:locale" content="en_US" />
 
@@ -74,8 +78,37 @@
     <!-- =======================
          HEADER
     ======================== -->
-    <header>
-      <h1 class="site-title">ShawElias Talent Agency</h1>
+    <header
+      style="
+        padding: 8px 16px;
+        width: 100%;
+        max-width: 100%;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      "
+    >
+      <a
+        href="index.html"
+        class="site-title-link"
+        style="
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 10;
+        "
+      >
+        <h1 class="site-title">
+          <img
+            src="logo3.png"
+            alt="seta2"
+            style="max-width: 400px; height: auto; margin-top: -40px"
+          />
+        </h1>
+      </a>
+      <div style="flex: 1"></div>
 
       <button class="nav-toggle" aria-label="Toggle menu">
         <div class="nav-toggle__bars">
@@ -87,7 +120,6 @@
       </button>
 
       <nav class="nav-menu">
-        <a href="index.html">Home</a>
         <a href="films.html">Films</a>
         <a href="#casting">Casting</a>
         <a href="#join">Join</a>
@@ -106,12 +138,37 @@
         <div class="hero__col hero__col--image">
           <div class="hero__img-wrap">
             <a
-              class="ig-badge neon"
+              class="ig-badge"
               href="https://www.instagram.com/kareenshaw1/?hl=en"
               target="_blank"
+              rel="noopener"
             >
-              <span class="ig-icon-svg"></span>
-              Follow
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="red"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="5"
+                  ry="5"
+                  fill="black"
+                />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              <span style="color: red !important; font-weight: bold"
+                >FOLLOW</span
+              >
             </a>
             <img src="ks.jpg" alt="Kareem Shaw" />
           </div>
@@ -121,9 +178,10 @@
         <div class="hero__col hero__col--panel">
           <div class="hero__panel">
             <img
-              src="setaalt.png"
+              src="seta2.jpg"
               alt="ShawElias Talent Agency Logo"
               class="hero__logo"
+              style="max-width: 85%; width: auto; height: auto"
             />
 
             <h2>Real People. Real Roles. Real Shots On Screen.</h2>
@@ -155,12 +213,37 @@
         <div class="hero__col hero__col--image">
           <div class="hero__img-wrap">
             <a
-              class="ig-badge neon"
+              class="ig-badge"
               href="https://www.instagram.com/racertified/?hl=en"
               target="_blank"
+              rel="noopener"
             >
-              <span class="ig-icon-svg"></span>
-              Follow
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="red"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="5"
+                  ry="5"
+                  fill="black"
+                />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              <span style="color: red !important; font-weight: bold"
+                >FOLLOW</span
+              >
             </a>
             <img src="ra.jpg" alt="Ra Certified" />
           </div>
@@ -172,77 +255,46 @@
       ======================== -->
       <section id="films" class="js-fade">
         <h2>What Ticket cast</h2>
-
-        <div class="film-slider" id="film-slider">
-          <!-- PREV -->
-          <button
-            class="film-slider__btn film-slider__btn--prev"
-            aria-label="Previous photo"
-          >
-            &#10094;
-          </button>
-
-          <div class="film-slider__track">
-            <!-- SLIDE 1 -->
-            <article class="film film-slide film-slide--active">
-              <div class="film__poster">
-                <div class="film__poster-wrap">
-                  <a
-                    class="ig-badge neon"
-                    href="https://www.instagram.com/cast_member_1"
-                    target="_blank"
-                  >
-                    <span class="ig-icon-svg"></span>
-                    Follow
-                  </a>
-                  <img src="cast1.jpg" alt="What Ticket cast photo 1" />
-                </div>
-              </div>
-            </article>
-
-            <!-- SLIDE 2 -->
-            <article class="film film-slide">
-              <div class="film__poster">
-                <div class="film__poster-wrap">
-                  <a
-                    class="ig-badge neon"
-                    href="https://www.instagram.com/cast_member_2"
-                    target="_blank"
-                  >
-                    <span class="ig-icon-svg"></span>
-                    Follow
-                  </a>
-                  <img src="cast2.jpg" alt="What Ticket cast photo 2" />
-                </div>
-              </div>
-            </article>
-
-            <!-- SLIDE 3 -->
-            <article class="film film-slide">
-              <div class="film__poster">
-                <div class="film__poster-wrap">
-                  <a
-                    class="ig-badge neon"
-                    href="https://www.instagram.com/cast_member_3"
-                    target="_blank"
-                  >
-                    <span class="ig-icon-svg"></span>
-                    Follow
-                  </a>
-                  <img src="cast3.jpg" alt="What Ticket cast photo 3" />
-                </div>
-              </div>
-            </article>
+        <article class="film film-slide film-slide--active">
+          <div class="film__poster">
+            <div class="film__poster-wrap">
+              <a
+                class="ig-badge"
+                href="https://www.instagram.com/mikeloud215/?hl=en"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="red"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect
+                    x="2"
+                    y="2"
+                    width="20"
+                    height="20"
+                    rx="5"
+                    ry="5"
+                    fill="black"
+                  />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                <span style="color: red !important; font-weight: bold"
+                  >FOLLOW</span
+                >
+              </a>
+              <img src="ml.jpg" alt="Mike Loud" />
+            </div>
           </div>
-
-          <!-- NEXT -->
-          <button
-            class="film-slider__btn film-slider__btn--next"
-            aria-label="Next photo"
-          >
-            &#10095;
-          </button>
-        </div>
+        </article>
       </section>
 
       <!-- =======================
@@ -278,20 +330,180 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="ms-footer">
       <a
-        class="ig-badge neon ig-badge--footer"
         href="https://www.instagram.com/shawelias_talentagency?igsh=MTl0bWl4MWhtbDc5cQ=="
         target="_blank"
-        rel="noopener"
-        aria-label="Follow us on Instagram"
+        rel="noopener noreferrer"
+        class="ms-footer-ig"
+        aria-label="Shaw Elias Talent Agency on Instagram"
       >
-        <span class="ig-icon-svg"></span>
-        Follow us
+        <!-- Instagram Icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span>Follow Us</span>
       </a>
 
-      <p>© 2026 ShawElias Talent Agency. All rights reserved.</p>
+      <p class="copyright-red">
+        © 2026 ShawElias Talent Agency. All rights reserved.
+      </p>
     </footer>
+
+    <style>
+      .ms-footer {
+        width: 100%;
+        margin: 18px auto 0;
+        padding: 18px 0 22px;
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        font-size: 13px;
+        color: #555;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .ms-footer-ig {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        transition: all 0.25s ease;
+      }
+
+      .ms-footer-ig svg {
+        stroke: #ff0000;
+      }
+
+      .ms-footer-ig:hover {
+        color: #ff0000;
+        filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.6));
+        transform: scale(1.05);
+      }
+
+      .ms-footer p {
+        margin: 0;
+        font-size: 12px;
+        opacity: 0.85;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .ms-footer {
+          border-top: 1px solid rgba(255, 255, 255, 0.18);
+          color: #aaa;
+        }
+        .ms-footer-ig:hover {
+          color: #ff0000;
+        }
+      }
+
+      /* Black text and red icon for all IG badges */
+      .ig-badge {
+        color: #000 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        padding: 6px 10px !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        text-decoration: none !important;
+        transition: all 0.25s ease !important;
+        width: fit-content !important;
+        max-width: fit-content !important;
+        min-width: auto !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+      }
+
+      /* Force text nodes to be visible */
+      .ig-badge * {
+        color: inherit !important;
+      }
+
+      .ig-badge svg {
+        stroke: #ff0000 !important;
+        flex-shrink: 0 !important;
+        width: 24px !important;
+        height: 24px !important;
+      }
+
+      .ig-badge span,
+      .ig-badge::after {
+        display: inline !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+
+      /* Override any width restrictions from neon class */
+      .ig-badge.neon {
+        width: fit-content !important;
+        max-width: none !important;
+        overflow: visible !important;
+      }
+
+      /* Ensure text is not hidden via transforms or positioning */
+      .ig-badge::before,
+      .ig-badge::after {
+        content: none !important;
+      }
+
+      .ig-badge:hover {
+        color: #ff0000 !important;
+        filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.4)) !important;
+        transform: scale(1.05) !important;
+      }
+
+      /* Position hero image badges in upper left corner */
+      .hero__img-wrap {
+        position: relative;
+      }
+
+      .hero__img-wrap .ig-badge {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 10;
+      }
+
+      /* Film caption styling */
+      .film-caption {
+        text-align: center;
+        margin-top: 12px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+      }
+
+      .ig-badge-wide {
+        min-width: 110px !important;
+        max-width: 110px !important;
+        width: 110px !important;
+        justify-content: center !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+      }
+
+      .ig-badge-wide svg {
+        flex-shrink: 0 !important;
+      }
+    </style>
 
     <!-- =======================
          JS
@@ -329,6 +541,11 @@
         prevFilmBtn.addEventListener("click", () => {
           filmIndex = (filmIndex - 1 + filmSlides.length) % filmSlides.length;
           showFilmSlide(filmIndex);
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft" && prevFilmBtn) prevFilmBtn.click();
+          else if (e.key === "ArrowRight" && nextFilmBtn) nextFilmBtn.click();
         });
 
         showFilmSlide(filmIndex);
