@@ -1,5 +1,61 @@
+/* Copyright always red */
+.copyright-red {
+  color: #ff0000 !important;
+}
+/* Footer Styles (shared) */
+.ms-footer {
+  width: 100%;
+  margin: 18px auto 0;
+  padding: 18px 0 22px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 13px;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Unified Instagram Badge Style */
+.ms-footer-ig,
+.ig-badge,
+.ig-badge--footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #000;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+  width: fit-content;
+}
+
+.ms-footer-ig svg,
+.ig-badge svg {
+  stroke: #ff0000;
+}
+
+.ms-footer-ig:hover,
+.ig-badge:hover,
+.ig-badge--footer:hover {
+  color: #fff;
+  background: #ff0000;
+  border-color: #ff0000;
+}
+
+.ms-footer p {
+  margin: 0;
+  color: #555;
+}
 /* ==============================
-   GLOBAL RESET
+   GLOBAL + RESET
 ============================== */
 
 *,
@@ -8,8 +64,13 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: Arial, sans-serif;
   background: #000;
   color: red;
@@ -36,7 +97,7 @@ a {
 }
 
 /* ==============================
-   HEADER
+   HEADER + HAMBURGER
 ============================== */
 
 header {
@@ -61,7 +122,6 @@ header {
   color: red;
 }
 
-/* hamburger */
 .nav-toggle {
   position: absolute;
   right: 14px;
@@ -92,9 +152,9 @@ header {
 .nav-toggle__label {
   font-size: 0.75rem;
   font-weight: bold;
+  color: red;
 }
 
-/* nav menu */
 .nav-menu {
   position: absolute;
   top: 60px;
@@ -107,11 +167,20 @@ header {
   flex-direction: column;
   gap: 8px;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transform: translateY(-10px);
-  transition: 0.3s ease;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-menu a {
+  font-weight: bold;
+  padding: 4px 8px;
 }
 
 .nav-menu.open {
@@ -121,185 +190,118 @@ header {
 }
 
 /* ==============================
-   HERO
+   GALLERY SECTION
 ============================== */
 
-.hero {
-  display: grid;
-  grid-template-columns: 0.9fr 1.2fr 0.9fr;
-  gap: 16px;
-  padding: 16px;
-  max-width: 1150px;
-  margin: 30px auto;
-}
-
-.hero__col {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  min-width: 0;
-}
-
-.hero__img-wrap {
-  position: relative;
-  width: 100%;
-  height: 480px;
-  border-radius: 12px;
-  overflow: visible;
-}
-
-.hero__col--image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 12px;
-}
-
-.hero__panel {
-  width: 100%;
-  background: #000;
-  border: 2px solid red;
-  border-radius: 12px;
-  padding: 26px 28px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-width: 0;
-}
-
-.hero__logo {
-  width: 110px;
-  max-width: 60%;
-  margin: 0 auto 12px;
-}
-
-.hero__tagline {
-  font-size: 0.9rem;
-}
-
-/* ==============================
-   IG BADGE
-============================== */
-
-.ig-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #000;
-  border: 1px solid red;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  z-index: 2;
-}
-
-.ig-badge svg {
-  stroke: red;
-}
-
-/* ==============================
-   BUTTONS
-============================== */
-
-.btn {
-  display: inline-block;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-.btn--light {
-  background: #000;
-  border: 1px solid red;
-}
-
-/* ==============================
-   FILMS SLIDER
-============================== */
-
-#films {
-  padding: 40px 16px;
-  text-align: center;
-}
-
-.film-slider {
+.gallery-section {
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.gallery-slider {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.film-slider__track {
+.gallery-slider__track {
   flex: 1;
   overflow: hidden;
+  position: relative;
 }
 
-.film-slider__btn {
+.gallery-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.gallery-slide--active {
+  display: flex;
+}
+
+.gallery-slide__image-wrap {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid red;
+}
+
+.gallery-slide__image-wrap a {
+  display: block;
+  cursor: zoom-in;
+}
+
+.gallery-slide__image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  max-height: 70vh;
+}
+
+.gallery-slide__caption {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.gallery-slide__caption p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.download-btn {
   background: #000;
   color: red;
-  border: 1px solid red;
+  border: 2px solid red;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.download-btn:hover {
+  background: red;
+  color: #000;
+  box-shadow: 0 0 15px red;
+}
+
+/* SLIDER ARROWS */
+.gallery-slider__btn {
+  background: #000;
+  color: red;
+  border: 2px solid red;
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: 20px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-.film {
-  display: none;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-}
-
-.film-slide--active {
-  display: flex;
-}
-
-.film__poster {
-  width: 260px;
-}
-
-.film__poster-wrap img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.film__video {
-  width: 100%;
-  max-width: 640px;
-  aspect-ratio: 16 / 9;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 0, 0, 0.5);
-  background: #000;
-}
-
-/* ==============================
-   SECTIONS
-============================== */
-
-#casting,
-#join {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-#casting p,
-#join p {
-  max-width: 700px;
-  margin: 10px auto 0;
-  line-height: 1.6;
+.gallery-slider__btn:active {
+  transform: scale(0.95);
 }
 
 /* ==============================
@@ -308,73 +310,112 @@ header {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
   background: #000;
   border-top: 1px solid rgba(255, 0, 0, 0.4);
   font-size: 0.85rem;
+  margin-top: 40px;
 }
 
-.ms-footer {
-  width: 100%;
-  margin: 18px auto 0;
-  padding: 18px 0 22px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 0, 0, 0.2);
-  font-size: 13px;
-  color: #ff0000;
+.ig-badge {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #000;
+  border: 1px solid red;
+  color: red;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+}
+
+.ig-badge.neon {
+  box-shadow:
+    0 0 8px red,
+    0 0 15px red;
+}
+
+.ig-badge.neon:hover {
+  box-shadow:
+    0 0 15px #ff1c1c,
+    0 0 30px #ff1c1c;
+  transform: translateY(-1px);
+}
+
+.ig-badge--footer {
+  margin: 0 auto 12px;
+  display: block;
+  width: fit-content;
+}
+
+.ig-icon-svg {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><path fill='black' stroke='red' stroke-width='25' d='M224 202.66A53.34 53.34 0 1 0 277.34 256 53.38 53.38 0 0 0 224 202.66Zm124.71-41a54 54 0 1 0 54 54 54 54 0 0 0-54-54ZM398.8 80A93.36 93.36 0 0 0 368 69.26C331.6 64 224 64 224 64S116.4 64 80 69.26A93.36 93.36 0 0 0 49.2 80a93.78 93.78 0 0 0-34 34C9.94 150.6 8 224 8 224s1.94 73.4 7.26 109.8a93.78 93.78 0 0 0 34 34A93.36 93.36 0 0 0 80 382.74C116.4 388 224 388 224 388s107.6 0 144-5.26a93.36 93.36 0 0 0 30.8-10.74 93.78 93.78 0 0 0 34-34C438.06 297.4 440 224 440 224s-1.94-73.4-7.26-109.8a93.78 93.78 0 0 0-34-34Z'/></svg>");
+}
+
+footer p {
+  margin: 10px 0 0;
 }
 
 /* ==============================
-   FADE-IN
+   MOBILE RESPONSIVE
 ============================== */
 
-.js-fade {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.6s ease-out;
-}
-
-.js-fade.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ==============================
-   MOBILE HERO (KEY FIX)
-============================== */
-
-@media (max-width: 600px) {
-  .hero {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 6px;
-    padding: 6px;
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 20px;
+    padding-right: 60px;
+  }
+  .gallery-title {
+    font-size: 1.2rem;
+  }
+  .gallery-slider {
+    gap: 4px;
+    flex-direction: column;
+  }
+  .gallery-slider__btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .gallery-slide__image-wrap {
     max-width: 98vw;
   }
-
-  .hero__img-wrap {
-    height: 22vw;
-    min-height: 110px;
-    max-height: 160px;
+  .gallery-slide__image-wrap img {
+    max-height: 40vh;
   }
-
-  .hero__panel {
-    padding: 10px 8px 12px;
+}
+@media (max-width: 480px) {
+  body {
+    padding-top: 40px;
   }
-
-  .hero__logo {
-    width: 70px;
+  header {
+    padding: 6px 8px;
   }
-
-  .hero__panel h1 {
+  .site-title {
     font-size: 16px;
+    padding-right: 30px;
   }
-
-  .hero__tagline {
-    font-size: 11px;
+  .nav-toggle {
+    top: 4px;
+    right: 6px;
+    padding: 3px 6px;
   }
-
-  .ig-badge {
-    font-size: 0.65rem;
-    padding: 5px 8px;
+  .gallery-section {
+    padding: 10px 2vw;
+  }
+  .download-btn {
+    padding: 4px 10px;
+    font-size: 0.8rem;
   }
 }
